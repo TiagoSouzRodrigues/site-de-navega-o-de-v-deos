@@ -1,13 +1,31 @@
 body{
     background-color: rgb(34, 33, 33);
-    display:flex;
-
-    flex-direction: column;
+    display: flex;
+    
+    text-align: center;
     align-items: center;
+    justify-content: center;
+
+   
 }
 
 .wrap {
     display: grid;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1px;
+    
+
+      
 }
+.wrap:hover > :not(:hover){
+    opacity: .4;
+    transform: scale(0.9);
+  }
+
+  @media screen and (max-width:739px) {
+    .wrap
+    {
+      grid-template-columns: repeat(1, 1fr); 
+      margin-right:none;
+    }
+  }
